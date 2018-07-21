@@ -1,0 +1,158 @@
+/**************************General UI*********************************/
+.my_canvas{
+	-fx-border-width: 1;
+	-fx-border-color: black;
+	-fx-border-style: dashed;
+	-fx-background-color: white;
+}
+
+.grid-pane{
+	-fx-hgap: 5;
+	-fx-vgap: 5;
+}
+
+.attrBtnBox{
+	-fx-spaceing: 5;
+	-fx-alignment: center;
+}
+/**************************UI*********************************/
+/**************************entity*********************************/
+.entity, .descAttr{
+	-fx-border-radius: 5;
+	-fx-background-radius: 5;
+	-fx-border-width: 1;
+	-fx-border-color: black;
+	-fx-background-color: white;
+	-fx-effect: dropshadow(gaussian, black, 4, 0.3, 1, 1);
+}
+
+.entity > .split-pane-divider{
+	-fx-background-color: black;
+	-fx-pref-width: 1;
+}
+
+.entity:selected, .descAttr:selected{
+	-fx-border-color: blue;
+}
+
+.entity:selected > .split-pane-divider{
+	-fx-background-color: blue;
+}
+
+.entity:active, .descAttr:active{
+	-fx-border-color: #abcdef;
+}
+
+.entity:active > .split-pane-divider{
+	-fx-background-color: #abcdef;
+}
+/**************************entity*********************************/
+
+/**************************attr graphic*********************************/
+.attrGraphic{
+	-fx-border-width: 1 1 1 1;
+	-fx-border-color: transparent transparent transparent transparent;
+	-fx-border-style: solid solid solid solid;
+}
+
+.attrGraphic:primary{
+	-fx-border-color: transparent transparent black transparent;
+	-fx-border-style: solid solid solid solid;
+}
+
+.attrGraphic:partial{
+	-fx-border-color: transparent transparent black transparent;
+	-fx-border-style: solid solid dashed solid;
+}
+/**************************attr graphic*********************************/
+
+/**************************relationship*********************************/
+.relationship > .diamond{
+	-fx-fill: white;
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+	-fx-effect: dropshadow(gaussian, black, 4, 0.3, 1, 1);
+}
+
+.relationship > .diamondOutline{
+	-fx-stroke: transparent;
+	-fx-stroke-width: 1;
+}
+
+.relationship:selected > .diamond{
+	-fx-stroke: blue;
+}
+
+.relationship:active > .diamond{
+	-fx-stroke: #abcdef;
+}
+
+.relationship:identifying > .diamond{
+	-fx-stroke-width: 3;
+}
+
+.relationship:identifying > .diamondOutline{
+	-fx-stroke: white;
+}
+/**************************relationship*********************************/
+
+/**************************relationship line*********************************/
+#tryLine{
+	-fx-stroke-width: 1;
+	-fx-stroke-dash-array: 5 3;
+}
+
+.relationshipLine > .innerLine{	
+	visibility: hidden;
+	-fx-stroke: white;
+}
+
+.relationshipLine > .outerLine{
+	-fx-stroke-width: 1;
+	-fx-stroke-dash-array: 100 0;
+	-fx-stroke: black;
+}
+
+.relationshipLine:selected > .innerLine{
+}
+
+.relationshipLine:selected > .outerLine{
+	-fx-stroke: blue;
+}
+
+.relationshipLine:active > .innerLine{
+}
+
+.relationshipLine:active > .outerLine{
+	-fx-stroke: #abcdef;
+}
+
+.relationshipLine:double_line > .innerLine{
+	visibility: visible;
+	-fx-stroke-width: 2;
+}
+
+.relationshipLine:double_line > .outerLine{
+	-fx-stroke-dash-array: 100 0;
+	-fx-stroke-width: 4;
+	-fx-stroke-line-cap: butt;
+}
+
+.relationshipLine:solid_line > .innerLine{
+	visibility: hidden;
+}
+
+.relationshipLine:solid_line > .outerLine{
+	-fx-stroke-dash-array: 100 0;
+	-fx-stroke-width: 1;	
+}
+
+.relationshipLine:dash_line > .innerLine{
+	visibility: hidden;	
+}
+
+.relationshipLine:dash_line > .outerLine{
+	-fx-stroke-width: 1;
+	-fx-stroke-dash-array: 3 3;
+}
+/**************************relationship line*********************************/
